@@ -14,12 +14,6 @@ const images = [
 ];
 
 const list = document.querySelector(".gallery");
-list.style.listStyleType = "none";
-list.style.display = "flex";
-list.style.flexDirection = "column";
-list.style.textAlign = "center";
-list.style.margin = "0";
-list.style.padding = "0";
 images.forEach((image) => {
   const item = document.createElement("li");
   item.listStyleType = "none";
@@ -28,6 +22,7 @@ images.forEach((image) => {
   img.alt = image.alt;
   img.width = "500";
   img.height = "300";
+  list.className = "stylization";
   item.appendChild(img);
   list.appendChild(item);
 });
